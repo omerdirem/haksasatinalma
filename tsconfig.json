@@ -13,9 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",  // Kök dizini belirtir
+    "baseUrl": ".",  
     "paths": {
-      "@lib/*": ["lib/*"]  // 'lib' klasörüne alias
+      "@lib/*": ["lib/*"]  
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
