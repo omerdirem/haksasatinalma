@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { supabase } from "./lib/supabaseclient";
+import { supabase } from "./lib/supabaseclient.ts";
 
 export default function Home() {
   const router = useRouter();
