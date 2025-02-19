@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "../lib/supabaseClient";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/Sidebar"; // Dosya yolunu doğru kontrol edin
 
 export default function Dashboard() {
   const router = useRouter();
