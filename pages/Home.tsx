@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { supabase } from "@lib/supabaseClient"; // Doğru import
+import { supabase } from "../lib/supabaseClient"; // Klasik import
 
 export default function Home() {
   const router = useRouter();
@@ -15,9 +15,9 @@ export default function Home() {
         }
 
         if (data?.user) {
-          router.replace("/dashboard"); // Kullanıcı varsa paneline yönlendir
+          router.replace("/dashboard");
         } else {
-          router.replace("/login"); // Kullanıcı yoksa giriş ekranına yönlendir
+          router.replace("/login");
         }
       } catch (err) {
         console.error("Unexpected error:", err);
@@ -25,7 +25,7 @@ export default function Home() {
     };
 
     checkUser();
-  }, [router]); // router bağımlılıklara eklendi
+  }, [router]);
 
   return <div>Yönlendiriliyor...</div>;
 }
