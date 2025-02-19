@@ -1,0 +1,32 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # Ana branch'e push yapıldığında tetiklenecek
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build
+
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v20
+      with:
+        vercel_token: ${{ secrets.VERCEL_TOKEN }}
+        vercel_org_id: ${{ secrets.VERCEL_ORG_ID }}
+        vercel_project_id: ${{ secrets.VERCEL_PROJECT_ID }}
