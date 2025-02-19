@@ -1,8 +1,10 @@
 export default function Home() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Welcome to My Purchase App</h1>
-      <p>This is a minimal Next.js project created via GitHub web UI.</p>
+    <div className="p-8">
+      <h1 className="text-4xl font-bold">Satın alma web yazılımı denemesi</h1>
+      <p className="mt-4 text-lg">
+        Başlangıç tarihi 19.02.2025
+      </p>
     </div>
   )
 }
